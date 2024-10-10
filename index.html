@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Snippet Cheatsheet</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+</body>
+   <header>
+    <h1>The CSS Cheatsheet</h1>
+    <h2>Heres a cheatsheet for all your CSS problems! 
+      select a snippet below to copy the code you desire.</h2>
+   </header> 
+  
+      <main>
+       <section class="row">
+         <div class="card">
+           <h3> Flexbox Row </h3>
+           <a> Use these three properties to create a Flexbox row layout. </a>
+           <pre>
+            .row {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+            } </pre>
+          </div>
+         <div class="card">
+           <h3> Flexbox Column </h3>
+            <a> Use this to create a Flexbox column layout </a>
+            <pre>
+              .column{
+                display: flex;
+                flex-direction: column
+              }</pre>
+          </div>
+          <div class="card">
+           <h3> CSS Grid Layout </h3>
+            <a> Build a 12-column layout using CSS Grid </a>
+            <pre>
+              .grid {
+                display: grid;
+                width: 100%;
+                grid-template-columns;
+              repeat(12, 1fr);
+              }</pre>
+         </div>
+         <div class="card">
+           <h3> Linear Gradients </h3>
+           <a> This will create a background linear gradient from top to bottom </a>
+           <pre>
+            .linear-gradient-background {
+              background-image: linear-gradient(
+                rgna(232, 102, 236, 0.3) 0%
+                rgba(232, 102, 236, 0.6) 100%
+              );
+            }</a>
+          </div>
+          <div class="card">
+            <h3> Box Transition Glow </h3>
+            <a> Use transition and box shadows to glow on hover. </a>
+            <pre>
+              .hr-card .card header {
+                border-radius: 8px;
+                transition: all 0.5s ease-in-out;
+              }
+              .hr-card:hover,
+              .hr-card:hover .card-header {
+                box-shadow: inset 8px 0px 8px
+              rgba(232, 102, 236, 1) 0 0 15px
+              rgba(232, 102, 236, 1);
+              }</pre>
+         </div>
+         <div class="card">
+           <h3> Overlay Card with Title </h3>
+           <a> Use position properties and negative margins to raise elements</a>
+           <pre>
+            .card-header {
+              position: relative; 
+              margin-top: -20px;
+            }</pre>
+         </div>
+      </section>
+    </main>
+  
+   <footer>
+     <span>Thanks for visiting!</span>
+   </footer>
+  </body>
+
+</html>

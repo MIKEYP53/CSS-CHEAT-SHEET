@@ -1,0 +1,115 @@
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+  /* declare a variable with `--` syntax */
+  --Navy: #13293d;
+  --White: #fff;
+  --SoftBlue: #54698c;
+  --LightBlue: #b4b8cf;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  flex-direction:column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Navy);
+  color: var(--White);
+  padding: 25px 0;
+}
+h1 {
+font-size: 200%;
+}
+h2 {
+  font-size: 90%;
+  color:var(--LightBlue)
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background: linear-gradient(var(--LightBlue), var(--SoftBlue));
+  justify-content: center;
+}
+
+.row{
+  margin: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0px;
+}
+
+.card {
+  flex-direction: column;
+  display: flex;
+  padding: 10px;
+  border-style: dashed;
+  margin: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex:1 1 0px;
+  background-color: var(--SoftBlue);
+  transition: all 130ms ease-in-out;
+  user-select: auto;
+}
+
+.card:hover{
+  border-style: solid;
+  border-color: var(--White) ;
+  background-color: var(--LightBlue);
+}
+
+
+@media screen and (min-width: 992px) {
+  .card {
+    flex-basis:30%;
+  }
+}
+ @media screen and (max-width: 992px) {
+  .card {
+    flex-basis:46%;
+  }
+} 
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis:55%;
+  } 
+}
+
+
+.card h3 {
+  margin-top: -30px;
+  flex: 0 1 0;
+  padding: 10px 5px;
+  background:  var(--Navy);
+  color: var(--White);
+  border: 2px solid var(--White);
+  border-radius: 10px;
+}
+
+.card a {
+  margin: 12px 5px;
+  color: var(--White) ;
+}
+
+.card pre{
+  flex: 1 0 50px;
+  color: var(--White);
+  font-weight: bolder;
+  background-color: #0f1213;
+  border-radius: 5px;
+  padding: 5px;
+  line-height: 1.5;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: var(--Navy);
+  color: var(--White);
+}
